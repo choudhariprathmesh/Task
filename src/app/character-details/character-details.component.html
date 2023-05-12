@@ -1,0 +1,24 @@
+
+<h2>CharacterDetails</h2>
+<div class="card mb-10" style="max-width: 1000px;" id="card">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="selectedCharacter.image" [alt]="selectedCharacter.name">
+    </div>
+    <div class="col-md-6" style="width: 600px;">        
+      <div class="card-body">
+          <div *ngIf="selectedCharacter">
+              <h2>{{ selectedCharacter.name }}</h2>
+              <p>Status: {{ selectedCharacter.status }}</p>
+              <p>Species: {{ selectedCharacter.species }}</p>
+              <p>Type: {{ selectedCharacter.type }}</p>
+              <p>Gender: {{ selectedCharacter.gender }}</p>
+              <p>Origin: {{ selectedCharacter.origin.name}}</p>
+              <p>Location: {{ selectedCharacter.location.name}}</p>
+           </div>
+           <a (click)="goBackToParent()"  class="btn btn-info">Go Back to CharacterList</a>
+      </div>
+    </div>
+  </div>
+</div>
+
